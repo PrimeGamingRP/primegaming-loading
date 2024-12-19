@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Gaming - Loading Screen</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #1d1d1d, #121212);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 4em;
+            text-transform: uppercase;
+            color: #ff6200;
+            margin: 0.2em;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: #cccccc;
+            animation: fadeIn 2s ease-in-out 0.5s;
+        }
+
+        .loading-bar {
+            margin-top: 20px;
+            width: 60%;
+            height: 20px;
+            background: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        .loading-bar .progress {
+            height: 100%;
+            background: #ff6200;
+            width: 0;
+            animation: loading 5s linear infinite;
+        }
+
+        @keyframes loading {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .rules {
+            position: absolute;
+            bottom: 10%;
+            text-align: center;
+            width: 80%;
+        }
+
+        .rules ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            font-size: 1em;
+        }
+
+        .rules li {
+            margin: 5px 0;
+            color: #bbbbbb;
+        }
+
+        .music {
+            position: absolute;
+            bottom: 5%;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .music a {
+            color: #ff6200;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prime Gaming</h1>
+    <h2>Willkommen auf unserem Server!</h2>
+
+    <div class="loading-bar">
+        <div class="progress"></div>
+    </div>
+
+    <div class="rules">
+        <h3>Server Regeln:</h3>
+        <ul>
+            <li>1. Kein RDM (Random Deathmatch).</li>
+            <li>2. Respektiere andere Spieler und Admins.</li>
+            <li>3. Keine Hacks oder Cheats.</li>
+            <li>4. Roleplay ernst nehmen.</li>
+            <li>5. Viel Spaß!</li>
+        </ul>
+    </div>
+
+    <div class="music">
+        Ladebildschirm-Musik von <a href="#">[Musik-Quelle einfügen]</a>
+    </div>
+</body>
+</html>
